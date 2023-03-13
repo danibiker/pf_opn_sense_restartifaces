@@ -1,3 +1,5 @@
+#!/bin/sh
+
 BOUNCE=ue0
 wanip=$(ifconfig $BOUNCE | sed -En -e 's/.*inet ([0-9.]+).*/\1/p')
 IDs=$(usbconfig list | grep Xiaomi | sed -r 's/ugen([0-9]\.[0-9]).*/\1/')
