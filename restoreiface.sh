@@ -6,7 +6,7 @@ IDs=$(usbconfig list | grep Xiaomi | sed -r 's/ugen([0-9]\.[0-9]).*/\1/')
 
 if [ -z "$wanip" ]
 then
-      echo $wanip is empty >> ~/renewout.log
+     echo `date +%Y%m%d.%H%M%S` "Resetting interface."  >> ~/renewout.log
      #usbconfig -d 1.2 set_config 1 ~/renewout.log
      for ID in $IDs
      do
